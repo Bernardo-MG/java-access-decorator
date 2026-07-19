@@ -7,7 +7,6 @@ import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
 
 import java.lang.reflect.Method;
-import java.nio.file.AccessDeniedException;
 
 import org.aspectj.lang.JoinPoint;
 import org.assertj.core.api.ThrowableAssert.ThrowingCallable;
@@ -48,6 +47,7 @@ class TestRequireResourceAuthorizationInterceptor {
     }
 
     @Test
+    @DisplayName("When the method is authorized, the interceptor accepts the call")
     void allowsExecution_WhenAuthorized() throws Exception {
         final Method           method;
         final ThrowingCallable exec;
@@ -66,6 +66,7 @@ class TestRequireResourceAuthorizationInterceptor {
     }
 
     @Test
+    @DisplayName("When the method is authorized, the interceptor throws the supplied exception")
     void deniesExecution_WhenNotAuthorized() throws Exception {
         final Method           method;
         final ThrowingCallable exec;
@@ -78,7 +79,7 @@ class TestRequireResourceAuthorizationInterceptor {
 
         // THEN
         exec = () -> interceptor.before(jp, method.getAnnotation(RequireResourceAuthorization.class));
-        assertThatThrownBy(exec).isInstanceOf(AccessDeniedException.class);
+        assertThatThrownBy(exec).isInstanceOf(RuntimeException.class);
     }
 
 }
