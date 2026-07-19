@@ -36,8 +36,10 @@ import org.slf4j.LoggerFactory;
 import com.bernardomg.framework.security.access.annotation.RequireResourceAuthorization;
 
 /**
- * Intercepts calls to any method marked by {@code AuthorizedResource} and applies resource-based authentication. This
- * is done with aspects.
+ * Intercepts calls to any method marked by the {@link RequireResourceAuthorization} annotation and applies
+ * resource-based authentication.
+ * <p>
+ * This requires a custom implementation of {@link ResourceAccessValidator}.
  *
  * @author Bernardo Mart&iacute;nez Garrido
  *

@@ -32,7 +32,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Access control annotation, marking a method with applies no security.
+ * Access decorator annotation, marking a method with applies no security.
  *
  * @author Bernardo Mart&iacute;nez Garrido
  *

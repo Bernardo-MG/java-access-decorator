@@ -32,7 +32,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Access control annotation, marking a method with requires permissions over a resource. Said permission is a pair
+ * Access decorator annotation, marking a method with requires permissions over a resource. Said permission is a pair
  * composed of a resource and an action applied over it.
  *
  * @author Bernardo Mart&iacute;nez Garrido

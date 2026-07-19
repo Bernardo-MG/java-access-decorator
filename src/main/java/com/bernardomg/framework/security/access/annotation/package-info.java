@@ -23,7 +23,7 @@
  */
 
 /**
- * Access control components.
+ * Access decorator annotations.
  */
 
 package com.bernardomg.framework.security.access.annotation;
