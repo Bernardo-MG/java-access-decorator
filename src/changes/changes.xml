@@ -5,7 +5,7 @@
         <author email="programming@bernardo.mg">Bernardo</author>
     </properties>
     <body>
-        <release version="0.0.1" date="2026-01-01" description="First release">
+        <release version="1.0.0" date="2026-07-19" description="First release">
             <action dev="bmg" type="add">
                 First release of the library.
             </action>

@@ -20,7 +20,7 @@
 
    <groupId>com.bernardomg.framework.security</groupId>
    <artifactId>access-decorator</artifactId>
-   <version>0.0.1-SNAPSHOT</version>
+   <version>1.0.0</version>
    <packaging>jar</packaging>
 
    <name>Access Decorator</name>
@@ -154,16 +154,13 @@
 
    <properties>
       <!-- ============================================== -->
-      <!-- ================ JAVA VERSION ================ -->
-      <!-- ============================================== -->
-      <java.version>11</java.version>
-      <!-- ============================================== -->
       <!-- =============== MANIFEST DATA ================ -->
       <!-- ============================================== -->
-      <manifest.name>com/bernardomg/framework/security/access/access-decorator</manifest.name>
+      <manifest.name>com/bernardomg/framework/security/access/access/decorator</manifest.name>
       <!-- ============================================== -->
       <!-- =========== DEPENDENCIES VERSIONS ============ -->
       <!-- ============================================== -->
+      <aspectj.version>1.9.25.1</aspectj.version>
       <assertj.version>3.27.7</assertj.version>
       <junit.jupiter.version>6.0.3</junit.jupiter.version>
       <mockito.version>5.23.0</mockito.version>
@@ -205,6 +202,16 @@
 
    <dependencies>
       <!-- ============================================== -->
+      <!-- ================= ASPECTJ ==================== -->
+      <!-- ============================================== -->
+      <dependency>
+         <!-- Aspectj Weaver -->
+         <groupId>org.aspectj</groupId>
+         <artifactId>aspectjweaver</artifactId>
+         <version>${aspectj.version}</version>
+         <scope>provided</scope>
+      </dependency>
+      <!-- ============================================== -->
       <!-- ================== LOGGERS =================== -->
       <!-- ============================================== -->
       <dependency>
@@ -240,6 +247,13 @@
          <!-- Mockito -->
          <groupId>org.mockito</groupId>
          <artifactId>mockito-core</artifactId>
+         <version>${mockito.version}</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
+         <!-- Mockito JUnit Jupiter -->
+         <groupId>org.mockito</groupId>
+         <artifactId>mockito-junit-jupiter</artifactId>
          <version>${mockito.version}</version>
          <scope>test</scope>
       </dependency>
