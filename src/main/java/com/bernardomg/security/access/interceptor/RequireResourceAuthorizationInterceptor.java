@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.framework.security.access.interceptor;
+package com.bernardomg.security.access.interceptor;
 
 import java.util.Objects;
 import java.util.function.Supplier;
@@ -33,7 +33,7 @@ import org.aspectj.lang.annotation.Before;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.bernardomg.framework.security.access.annotation.RequireResourceAuthorization;
+import com.bernardomg.security.access.annotation.RequireResourceAuthorization;
 
 /**
  * Intercepts calls to any method marked by the {@link RequireResourceAuthorization} annotation and applies

@@ -23,7 +23,7 @@
  */
 
 /**
- * Access decorator annotations.
+ * Access decorator annotation interception components.
  */
 
-package com.bernardomg.framework.security.access.annotation;
+package com.bernardomg.security.access.interceptor;

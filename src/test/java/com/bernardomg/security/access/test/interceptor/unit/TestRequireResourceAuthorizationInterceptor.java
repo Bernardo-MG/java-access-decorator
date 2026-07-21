@@ -1,5 +1,5 @@
 
-package com.bernardomg.framework.security.access.test.interceptor.unit;
+package com.bernardomg.security.access.test.interceptor.unit;
 
 import static org.assertj.core.api.Assertions.assertThatCode;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -17,9 +17,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
-import com.bernardomg.framework.security.access.annotation.RequireResourceAuthorization;
-import com.bernardomg.framework.security.access.interceptor.RequireResourceAuthorizationInterceptor;
-import com.bernardomg.framework.security.access.interceptor.ResourceAccessValidator;
+import com.bernardomg.security.access.annotation.RequireResourceAuthorization;
+import com.bernardomg.security.access.interceptor.RequireResourceAuthorizationInterceptor;
+import com.bernardomg.security.access.interceptor.ResourceAccessValidator;
 
 @ExtendWith(MockitoExtension.class)
 @DisplayName("RequireResourceAuthorizationInterceptor")

@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package com.bernardomg.framework.security.access.annotation;
+package com.bernardomg.security.access.annotation;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -32,8 +32,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Access decorator annotation, marking a method with requires permissions over a resource. Said permission is a pair
- * composed of a resource and an action applied over it.
+ * Access decorator annotation, marking a method with applies no security.
  *
  * @author Bernardo Mart&iacute;nez Garrido
  *
@@ -42,20 +41,6 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Inherited
 @Documented
-public @interface RequireResourceAuthorization {
-
-    /**
-     * Action required over the resource.
-     *
-     * @return action required
-     */
-    String action();
-
-    /**
-     * Resource to access.
-     *
-     * @return resource to access
-     */
-    String resource();
+public @interface Unsecured {
 
 }
